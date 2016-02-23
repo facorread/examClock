@@ -92,8 +92,7 @@ function renderHour() {
     }
     if(h >= 12) {
         document.getElementById("ampm").innerHTML = "PM";
-    }
-    else {
+    } else {
         document.getElementById("ampm").innerHTML = "AM";
     }
 }

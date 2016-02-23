@@ -19,7 +19,7 @@ Contains code from a DYclassroom project:
 https://www.dyclassroom.com/web-project/html5-how-to-create-a-simple-clock-using-javascript
 */
 
-var d,h,m,s,animate;
+var d, h, m, s, ampm, animate;
 
 // Set the exam time in minutes here. This clock should be loaded at the exact minute of the start of the exam.
 // Example: a 10-minute exam starting at 9:30AM sharp will show 0 at 9:40 AM sharp.
@@ -32,7 +32,7 @@ function init(){
     h=d.getHours();
     m=d.getMinutes();
     s=d.getSeconds();
-    renderTime('hr',h);
+    renderHour();
     renderTime('min',m);
     renderExamTimeLeft();
     clockSeconds();
@@ -73,13 +73,29 @@ function stepClockMinutesBase() {
     if(m == 60) {
         m = 0;
         h++;
-        if(h == 24) {
-            h = 0;
-        }
-        renderTime("hr", h);
+        renderHour();
     }
     renderTime("min", m);
     renderExamTimeLeft();
+}
+
+function renderHour() {
+    if(h == 24) {
+        document.getElementById("hr").innerHTML = 12;
+    }
+    if(h > 12) {
+        document.getElementById("hr").innerHTML = h - 12;
+    } else if (!h) {
+        renderTime(12); // Midnight, 0 changes to 12AM
+    } else {
+        document.getElementById("hr").innerHTML = h;
+    }
+    if(h >= 12) {
+        document.getElementById("ampm").innerHTML = "PM";
+    }
+    else {
+        document.getElementById("ampm").innerHTML = "AM";
+    }
 }
 
 function renderTime(id,val) {
@@ -91,7 +107,7 @@ function renderTime(id,val) {
 
 function renderExamTimeLeft() {
     var examTimeLabel = document.getElementById("examTimeLeft");
-    examTimeLabel.innerHTML=examTimeLeft;
+    examTimeLabel.innerHTML = examTimeLeft;
     if(examTimeLeft == 3) {
         examTimeLabel.style.color = "red";
         document.getElementById("examTimeLeftMin").style.color = "red";

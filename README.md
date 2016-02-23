@@ -22,3 +22,20 @@ Contains code from a DYclassroom project:
 
 https://www.dyclassroom.com/web-project/html5-how-to-create-a-simple-clock-using-javascript
 
+# Frequently Asked Questions
+
+Q. How do I change the messages?
+
+A. Just click the text area and start typing.
+
+Q. How do I set the total exam time?
+
+A. Set the value of the examTimeLeft variable in file `script.js`
+
+Q. How do I change the colors, fonts, or sizes?
+
+A. Edit `style.css` and reload.
+
+Q. Why do I have to edit the source code?
+
+A. Because I do not have the time to design a nice interface and I want to keep this project as simple as it gets. You are encouraged to learn to code. See the three files as examples.

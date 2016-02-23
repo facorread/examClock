@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+examClock: Simple clock, countdown, and message board for taking exams
+Copyright (C) 2016 Fabio Correa fabio5@umd.edu
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Contains code from a DYclassroom project:
+"HTML5 | How to create a simple Clock using JavaScript," downloaded 2016-02-23 from:
+https://www.dyclassroom.com/web-project/html5-how-to-create-a-simple-clock-using-javascript
+-->
+<html>
+    <head>
+        <title>Exam clock by Fabio Correa</title>
+        <script type="text/javascript" src="script.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table class="timeTable">
+        <tr>
+        <td>
+            <span id="hr">00</span>
+            <span> : </span>
+            <span id="min">00</span>
+            <span id="secseparator"> : </span>
+            <span id="sec">00</span>
+            <span> AM</span>
+        </td>
+        <td class="examTimeCell">
+            <span> Time left: </span>
+            <span id="examTimeLeft">00</span>
+            <span id="examTimeLeftMin"> Min</span>
+        </td>
+        </tr>
+        </table>
+        <div class="ExamMessagesDiv">
+        <textarea autofocus class="ExamMessages" rows=15>
+Please sit quietly on every other chair.
+Not allowed: Devices, calculators, notes.
+Allowed: Pen, pencil, eraser.
+
+Please write CLEARLY.
+There is no extra paper.
+
+Come forward if you have questions.</textarea>
+        </div>
+    </body>
+</html>

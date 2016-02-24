@@ -81,12 +81,12 @@ function stepClockMinutesBase() {
 
 function renderHour() {
     if(h == 24) {
+        h = 0;
         document.getElementById("hr").innerHTML = 12;
-    }
-    if(h > 12) {
+    } else if(h > 12) {
         document.getElementById("hr").innerHTML = h - 12;
     } else if (!h) {
-        renderTime(12); // Midnight, 0 changes to 12AM
+        document.getElementById("hr").innerHTML = 12; // Midnight, 0 changes to 12AM
     } else {
         document.getElementById("hr").innerHTML = h;
     }
@@ -101,7 +101,7 @@ function renderTime(id,val) {
     if(val < 10) {
         val='0' + val;
     }
-    document.getElementById(id).innerHTML=val;
+    document.getElementById(id).innerHTML = val;
 };
 
 function renderExamTimeLeft() {

@@ -34,50 +34,27 @@ function init(){
     s=d.getSeconds();
     renderHour();
     renderTime('min',m);
+    renderTime("sec",s);
     renderExamTimeLeft();
-    clockSeconds();
-    // clockMinutes();
+    animate = setInterval(clockSeconds, 1000);
 };
 
 function clockSeconds() {
-    renderTime("sec",s);
-    animate = setTimeout(stepClockSeconds,1000);
-}
-
-function stepClockSeconds() {
     s++;
     if(s == 60){
         s = 0;
-        stepClockMinutesBase();
+        m++;
+        examTimeLeft--;
+        if(m == 60) {
+            m = 0;
+            h++;
+            renderHour();
+        }
+        renderTime("min", m);
+        renderExamTimeLeft();
     }
     renderTime("sec", s);
-    animate = setTimeout(stepClockSeconds, 1000);
 };
-
-function clockMinutes() {
-    element = document.getElementById("secseparator");
-    element.parentNode.removeChild(element);
-    element = document.getElementById("sec");
-    element.parentNode.removeChild(element);
-    animate=setTimeout(stepClockMinutes, 1000 * (60 - s));
-}
-
-function stepClockMinutes() {
-    stepClockMinutesBase();
-    animate = setTimeout(stepClockSeconds, 60000);
-}
-
-function stepClockMinutesBase() {
-    m++;
-    examTimeLeft--;
-    if(m == 60) {
-        m = 0;
-        h++;
-        renderHour();
-    }
-    renderTime("min", m);
-    renderExamTimeLeft();
-}
 
 function renderHour() {
     if(h == 24) {

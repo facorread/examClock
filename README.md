@@ -18,6 +18,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # Frequently Asked Questions
 
+Q. How do I use this?
+
+A. Download and extract the source code in the classroom computer. Open index.html before students start coming into the classroom. Set the exam time and type your messages, including clarifications about the exam contents, specific questions, glossary, rules, etc. Turn the projector on.
+
 Q. How do I change the messages?
 
 A. Just click the text area and start typing.
@@ -36,4 +40,4 @@ A. Edit `style.css` and reload.
 
 Q. Why do I have to edit the source code?
 
-A. Because I do not have the time to design a nice interface and I want to keep this project as simple as it gets. You are encouraged to learn to code. See the three files as examples.
+A. Because I do not have the time to design a nice interface and I want to keep this project as simple as it gets. Editing these three files is scary the first time only. You are encouraged to learn to code.

@@ -13,81 +13,44 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-Contains code from a DYclassroom project:
-"HTML5 | How to create a simple Clock using JavaScript," downloaded 2016-02-23 from:
-https://www.dyclassroom.com/web-project/html5-how-to-create-a-simple-clock-using-javascript
 */
 
-var d, h, m, s, ampm, animate;
+// The exam time can be set by clicking it.
+var examTimeLeft = 75;
 
-// Set the exam time in minutes here. This clock should be loaded at the exact minute of the start of the exam.
-// Example: a 10-minute exam starting at 9:30AM sharp will show 0 at 9:40 AM sharp.
-
-// Load this clock within 9:28AM
-var examTimeLeft = 77;
-
-function init(){
-    d=new Date();
-    h=d.getHours();
-    m=d.getMinutes();
-    s=d.getSeconds();
-    renderHour();
-    renderTime('min',m);
-    renderTime("sec",s);
+function init() {
+    renderTime();
     renderExamTimeLeft();
-    animate = setInterval(clockSeconds, 1000);
-};
+    setInterval(renderTime, 1000);
+}
 
-function clockSeconds() {
-    s++;
-    if(s == 60){
-        s = 0;
-        m++;
-        examTimeLeft--;
-        if(m == 60) {
-            m = 0;
-            h++;
-            renderHour();
-        }
-        renderTime("min", m);
+function renderTime() {
+    var d = new Date();
+    document.getElementById("currentTime").innerHTML = d.toLocaleTimeString();
+    if(d.getSeconds() == 0) {
+        --examTimeLeft;
         renderExamTimeLeft();
     }
-    renderTime("sec", s);
-};
-
-function renderHour() {
-    if(h == 24) {
-        h = 0;
-        document.getElementById("hr").innerHTML = 12;
-    } else if(h > 12) {
-        document.getElementById("hr").innerHTML = h - 12;
-    } else if (!h) {
-        document.getElementById("hr").innerHTML = 12; // Midnight, 0 changes to 12AM
-    } else {
-        document.getElementById("hr").innerHTML = h;
-    }
-    if(h >= 12) {
-        document.getElementById("ampm").innerHTML = "PM";
-    } else {
-        document.getElementById("ampm").innerHTML = "AM";
-    }
 }
-
-function renderTime(id,val) {
-    if(val < 10) {
-        val='0' + val;
-    }
-    document.getElementById(id).innerHTML = val;
-};
 
 function renderExamTimeLeft() {
-    var examTimeLabel = document.getElementById("examTimeLeft");
-    examTimeLabel.innerHTML = examTimeLeft;
-    if(examTimeLeft == 3) {
-        examTimeLabel.style.color = "red";
-        document.getElementById("examTimeLeftMin").style.color = "red";
+    var examTimeCell = document.getElementById("examTimeCell");
+    examTimeCell.innerHTML = "Time left: " + examTimeLeft + " Min";
+    // The following should not be optimized because this function is invoked by setExamTime() at any time.
+    if(examTimeLeft <= 10) {
+        examTimeCell.style.color = "red";
+    } else {
+        examTimeCell.style.color = "white";
     }
 }
 
-window.onload=init;
+window.onload = init;
+
+function setExamTime() {
+    var enteredText = prompt("Enter the new time left (Min).", "120");
+    if(enteredText.match(/^\d+$/)) {
+        examTimeLeft = enteredText;
+        renderTime();
+        renderExamTimeLeft();
+    }
+}

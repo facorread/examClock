@@ -16,12 +16,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Contains code from a DYclassroom project:
-
-*HTML5 | How to create a simple Clock using JavaScript*, downloaded 2016-02-23 from:
-
-https://www.dyclassroom.com/web-project/html5-how-to-create-a-simple-clock-using-javascript
-
 # Frequently Asked Questions
 
 Q. How do I change the messages?
@@ -30,7 +24,11 @@ A. Just click the text area and start typing.
 
 Q. How do I set the total exam time?
 
-A. Set the value of the examTimeLeft variable in file `script.js`
+A. Just click it and change it.
+
+Q. How do I change the font sizes?
+
+A. Zoom in and out using your browser's controls. If you are not satisfied with the results, edit `style.css` and reload.
 
 Q. How do I change the colors, fonts, or sizes?
 

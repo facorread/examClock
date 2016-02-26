@@ -29,18 +29,9 @@ https://www.dyclassroom.com/web-project/html5-how-to-create-a-simple-clock-using
     <body>
         <table class="timeTable">
         <tr>
-        <td>
-            <span id="hr">00</span>
-            <span> : </span>
-            <span id="min">00</span>
-            <span> : </span>
-            <span id="sec">00</span>
-            <span id="ampm">AM</span>
-        </td>
-        <td class="examTimeCell">
-            <span> Time left: </span>
-            <span id="examTimeLeft">00</span>
-            <span id="examTimeLeftMin"> Min</span>
+        <td id="currentTime"></td>
+        <td class="examTimeCell" id="examTimeCell" onclick="setExamTime()">
+            Time left: <span id="examTimeLeft">00</span> Min
         </td>
         </tr>
         </table>

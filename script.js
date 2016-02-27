@@ -48,7 +48,7 @@ function renderExamTimeLeft() {
 window.onload = init;
 
 function setExamTime() {
-    var enteredText = prompt("Enter the new time left (Min).", "120");
+    var enteredText = prompt("Enter the new time left in minutes:", examTimeLeft);
     if(enteredText.match(/^\d+$/)) {
         examTimeLeft = enteredText;
         renderTime();

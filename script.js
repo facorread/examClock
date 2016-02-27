@@ -21,6 +21,7 @@ var examTimeLeft = 75;
 function init() {
     renderTime();
     renderExamTimeLeft();
+    resizeExam();
     setInterval(renderTime, 1000);
 }
 
@@ -53,4 +54,8 @@ function setExamTime() {
         renderTime();
         renderExamTimeLeft();
     }
+}
+
+function resizeExam() {
+    document.getElementById("ExamMessages").style.height = (window.innerHeight * 0.8) + "px";
 }

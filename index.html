@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <script type="text/javascript" src="script.js"></script>
         <link type="text/css" rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body onresize="resizeExam()">
         <table class="timeTable">
         <tr>
         <td id="currentTime"></td>
@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </tr>
         </table>
         <div class="ExamMessagesDiv">
-        <textarea autofocus class="ExamMessages" rows=15>
+        <textarea autofocus class="ExamMessages" id="ExamMessages">
 Please sit quietly on every other chair.
 Not allowed: Devices, calculators, notes.
 Allowed: Pen, pencil, eraser.

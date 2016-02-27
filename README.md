@@ -1,5 +1,6 @@
 # examClock
-examClock: Simple clock, countdown, and message board for taking exams
+
+Simple clock, countdown, and message board for taking exams
 
 Copyright (C) 2016 Fabio Correa fabio5@umd.edu
 
@@ -16,7 +17,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Frequently Asked Questions
+# Questions
 
 Q. How do I use this?
 
@@ -38,6 +39,10 @@ Q. How do I change the colors, fonts, or sizes?
 
 A. Edit `style.css` and reload.
 
-Q. Why do I have to edit the source code?
+Q. Why do I have to edit `style.css`?
 
-A. Because I do not have the time to design a nice interface and I want to keep this project as simple as it gets. Editing these three files is scary the first time only. You are encouraged to learn to code.
+A. Because I do not have the time to design a nice interface and I want to keep this project as simple as it gets. Editing the source code is scary the first time only. You are encouraged to learn to code.
+
+Q. Why the boring style?
+
+A. White letters on a black background are easier on the eyes than black on white, particularly when looking at a screen or projection. Sans serif letters are easier to read, too. This project is designed to avoid distraction while presenting the instructions and information clearly.

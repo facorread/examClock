@@ -31,6 +31,10 @@ Q. How do I set the total exam time?
 
 A. Just click it and change it.
 
+Q. Why the boring style?
+
+A. White letters on a black background are easier on the eyes than black on white, particularly when looking at a screen or projection. Sans serif letters are easier to read, too. This project is designed to avoid distraction while presenting clear instructions and information.
+
 Q. How do I change the font sizes?
 
 A. Zoom in and out using your browser's controls. If you are not satisfied with the results, edit `style.css` and reload.
@@ -39,10 +43,11 @@ Q. How do I change the colors, fonts, or sizes?
 
 A. Edit `style.css` and reload.
 
+Q. How can I move the clock and timer away from the borders?
+
+A. In `style.css`, edit the `padding` property in the `.timeTable` block. Reload.
+
 Q. Why do I have to edit `style.css`?
 
 A. Because I do not have the time to design a nice interface and I want to keep this project as simple as it gets. Editing the source code is scary the first time only. You are encouraged to learn to code.
 
-Q. Why the boring style?
-
-A. White letters on a black background are easier on the eyes than black on white, particularly when looking at a screen or projection. Sans serif letters are easier to read, too. This project is designed to avoid distraction while presenting the instructions and information clearly.

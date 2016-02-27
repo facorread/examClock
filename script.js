@@ -27,7 +27,7 @@ function init() {
 
 function renderTime() {
     var d = new Date();
-    document.getElementById("currentTime").innerHTML = d.toLocaleTimeString();
+    document.getElementById("currentTimeCell").innerHTML = d.toLocaleTimeString();
     if(d.getSeconds() == 0) {
         --examTimeLeft;
         renderExamTimeLeft();

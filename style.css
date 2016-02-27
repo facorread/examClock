@@ -6,12 +6,18 @@
     background-color:black;
     border:none;
     outline:none;
+    text-align:center;
 }
 
 .timeTable {
     font-size:65px;
-    width:99%;
+    width:100%;
     height:auto;
+    padding:0 1px 0 1px;
+}
+
+.currentTimeCell {
+    text-align:left;
 }
 
 .examTimeCell {
@@ -27,5 +33,4 @@
     font-size:55px;
     width:99%;
     resize:none;
-    text-align:center;
 }

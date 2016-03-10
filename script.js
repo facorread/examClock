@@ -16,7 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 // The exam time can be set by clicking it.
-var examTimeLeft = 75;
+var examTimeLeft = 75, examTimeDisabled = false;
 
 function init() {
     renderTime();
@@ -38,7 +38,9 @@ function renderExamTimeLeft() {
     var examTimeCell = document.getElementById("examTimeCell");
     examTimeCell.innerHTML = "Time left: " + examTimeLeft + " Min";
     // The following should not be optimized because this function is invoked by setExamTime() at any time.
-    if(examTimeLeft <= 10) {
+    if(examTimeDisabled) {
+        examTimeCell.style.color = "black";
+    } else if(examTimeLeft <= 10) {
         examTimeCell.style.color = "red";
     } else {
         examTimeCell.style.color = "white";
@@ -48,8 +50,13 @@ function renderExamTimeLeft() {
 window.onload = init;
 
 function setExamTime() {
-    var enteredText = prompt("Enter the new time left in minutes:", examTimeLeft);
+    var enteredText = prompt("Enter the new time left in minutes\n(0 to hide):", examTimeLeft);
     if(enteredText.match(/^\d+$/)) {
+        if(enteredText == "0") {
+            examTimeDisabled = true;
+        } else {
+            examTimeDisabled = false;
+        }
         examTimeLeft = enteredText;
         renderTime();
         renderExamTimeLeft();

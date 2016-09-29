@@ -2,11 +2,11 @@
 
 Simple clock, countdown, and message board for taking exams
 
+# User Guide
+
+Before students start coming into the classroom, turn on the computer and projector. In the web browser, go to http://facorread.github.io/examClock/ and set the exam time and type your messages, instructions, clarifications about the exam contents, specific questions, glossary, rules, etc.
+
 # Questions
-
-Q. How do I use this?
-
-A. Before students start coming into the classroom, turn on the computer and projector. In the web browser, go to http://facorread.github.io/examClock/ and set the exam time and type your messages, including clarifications about the exam contents, specific questions, glossary, rules, etc.
 
 Q. How do I change the messages?
 

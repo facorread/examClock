@@ -16,7 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 // The exam time can be set by clicking it.
-var examTimeLeft = 75, examTimeDisabled = false;
+var examTimeLeft = 75, examTimeEnabled = false;
 
 function init() {
     renderTime();
@@ -28,7 +28,7 @@ function init() {
 function renderTime() {
     var d = new Date();
     document.getElementById("currentTimeCell").innerHTML = d.toLocaleTimeString();
-    if(d.getSeconds() == 0) {
+    if(examTimeEnabled && (d.getSeconds() == 0)) {
         --examTimeLeft;
         renderExamTimeLeft();
     }
@@ -36,14 +36,17 @@ function renderTime() {
 
 function renderExamTimeLeft() {
     var examTimeCell = document.getElementById("examTimeCell");
-    examTimeCell.innerHTML = "Time left: " + examTimeLeft + " Min";
     // The following should not be optimized because this function is invoked by setExamTime() at any time.
-    if(examTimeDisabled) {
-        examTimeCell.style.color = "black";
-    } else if(examTimeLeft <= 10) {
-        examTimeCell.style.color = "red";
+    if(examTimeEnabled) {
+        examTimeCell.innerHTML = "Time left: " + examTimeLeft + " Min";
+        if(examTimeLeft <= 10) {
+           examTimeCell.style.color = "red";
+        } else {
+            examTimeCell.style.color = document.body.style.color;
+        }
     } else {
-        examTimeCell.style.color = "white";
+        examTimeCell.innerHTML = "Click here for timer";
+        examTimeCell.style.color = document.body.style.color;
     }
 }
 
@@ -52,15 +55,13 @@ window.onload = init;
 function setExamTime() {
     var enteredText = prompt("Enter the new time left in minutes\n(0 to hide):", examTimeLeft);
     if(enteredText.match(/^\d+$/)) {
-        if(enteredText == "0") {
-            examTimeDisabled = true;
-        } else {
-            examTimeDisabled = false;
-        }
+        examTimeEnabled = (enteredText > 0);
         examTimeLeft = enteredText;
-        renderTime();
-        renderExamTimeLeft();
+    } else {
+        examTimeEnabled = false;
     }
+    renderTime();
+    renderExamTimeLeft();
 }
 
 function resizeExam() {

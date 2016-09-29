@@ -2,26 +2,11 @@
 
 Simple clock, countdown, and message board for taking exams
 
-Copyright (C) 2016 Fabio Correa fabio5@umd.edu
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 # Questions
 
 Q. How do I use this?
 
-A. Download and extract the source code in the classroom computer. Open index.html before students start coming into the classroom. Set the exam time and type your messages, including clarifications about the exam contents, specific questions, glossary, rules, etc. Turn the projector on.
+A. Before students start coming into the classroom, turn on the computer and projector. In the web browser, go to http://facorread.github.io/examClock/ and set the exam time and type your messages, including clarifications about the exam contents, specific questions, glossary, rules, etc.
 
 Q. How do I change the messages?
 
@@ -49,5 +34,21 @@ A. In `style.css`, edit the `padding` property in the `.timeTable` block. Reload
 
 Q. Why do I have to edit `style.css`?
 
-A. Because I do not have the time to design a nice interface and I want to keep this project as simple as it gets. Editing the source code is scary the first time only. You are encouraged to learn to code.
+A. Because I do not have the time to design a nice interface and I want to keep this project simple. Editing the source code is scary the first time only. You are encouraged to learn to code.
 
+# Copyright And License
+
+Copyright (C) 2016 Fabio Correa fabio5@umd.edu
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this software.  If not, see <http://www.gnu.org/licenses/>.

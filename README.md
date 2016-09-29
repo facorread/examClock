@@ -5,6 +5,7 @@ Simple clock, countdown, and message board for taking exams
 Copyright (C) 2016 Fabio Correa fabio5@umd.edu
 
 https://github.com/facorread/examClock
+
 https://gitlab.com/facorread/examClock
 
 examClock is free software: you can redistribute it and/or modify

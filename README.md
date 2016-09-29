@@ -2,6 +2,21 @@
 
 Simple clock, countdown, and message board for taking exams
 
+Copyright (C) 2016 Fabio Correa fabio5@umd.edu https://github.com/facorread/examClock
+
+examClock is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+examClock is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with examClock.  If not, see <http://www.gnu.org/licenses/>.
+
 # User Guide
 
 Before students start coming into the classroom, turn on the computer and projector. In the web browser, go to http://facorread.github.io/examClock/ and type your messages, instructions, clarifications about the exam contents, specific questions, glossary, rules, etc.
@@ -27,20 +42,3 @@ A. Zoom in and out using your browser's controls.
 Q. How do I change the colors, fonts, or sizes? How can I move the clock and timer around?
 
 Use Chrome Developer Tools.
-
-# Copyright And License
-
-Copyright (C) 2016 Fabio Correa fabio5@umd.edu
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this software.  If not, see <http://www.gnu.org/licenses/>.

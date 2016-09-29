@@ -22,19 +22,11 @@ A. White letters on a black background are easier on the eyes than black on whit
 
 Q. How do I change the font sizes?
 
-A. Zoom in and out using your browser's controls. If you are not satisfied with the results, edit `style.css` and reload.
+A. Zoom in and out using your browser's controls.
 
-Q. How do I change the colors, fonts, or sizes?
+Q. How do I change the colors, fonts, or sizes? How can I move the clock and timer around?
 
-A. Edit `style.css` and reload.
-
-Q. How can I move the clock and timer away from the borders?
-
-A. In `style.css`, edit the `padding` property in the `.timeTable` block. Reload.
-
-Q. Why do I have to edit `style.css`?
-
-A. Because I do not have the time to design a nice interface and I want to keep this project simple. Editing the source code is scary the first time only. You are encouraged to learn to code.
+Use Chrome Developer Tools.
 
 # Copyright And License
 

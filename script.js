@@ -1,5 +1,5 @@
 /* This file is part of examClock: Simple clock, countdown, and message board for taking exams
-Copyright (C) 2016 Fabio Correa fabio5@umd.edu
+Copyright (C) 2016 Fabio Correa fabio5@osu.edu
 
 https://github.com/facorread/examClock
 https://gitlab.com/facorread/examClock

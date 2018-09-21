@@ -49,8 +49,6 @@ along with examClock.  If not, see <http://www.gnu.org/licenses/>.
     height:100%;
 }
 
-.ExamMessages {
+p {
     font-size:55px;
-    width:99%;
-    resize:none;
 }

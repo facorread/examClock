@@ -25,7 +25,7 @@ along with examClock.  If not, see <http://www.gnu.org/licenses/>.
         <script type="text/javascript" src="script.js"></script>
         <link type="text/css" rel="stylesheet" href="style.css">
     </head>
-    <body onresize="resizeExam()">
+    <body>
         <table class="timeTable">
         <tr>
         <td class="currentTimeCell" id="currentTimeCell"></td>
@@ -34,16 +34,22 @@ along with examClock.  If not, see <http://www.gnu.org/licenses/>.
         </td>
         </tr>
         </table>
-        <div class="ExamMessagesDiv">
-        <textarea autofocus class="ExamMessages" id="ExamMessages">
-Please sit quietly on every other chair.
-Not allowed: Devices, calculators, notes.
-Allowed: Pen, pencil, eraser.
-
-Please write CLEARLY.
-There is no extra paper.
-
-Come forward if you have questions.</textarea>
+        <div class="ExamMessagesDiv" contenteditable="true">
+					<div>
+						<p>Please sit quietly on every other chair.</p>
+						<p>Do NOT swap materials or change seats.</p>
+					</div>
+					<div>
+						<p>Allowed: questions, answers, pencil,</p>
+						<p>and eraser exclusively.</p>
+					</div>
+					<div>
+						<p>Power down all laptops, phones, smartwatches,</p>
+						<p>and put away all devices and any other elements.</p>
+					</div>
+					<div>
+						<p>Raise your hand if you have questions.</p>
+					</div>
         </div>
     </body>
 </html>

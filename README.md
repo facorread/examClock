@@ -23,7 +23,7 @@ along with examClock.  If not, see <http://www.gnu.org/licenses/>.
 
 # User Guide
 
-Before students start coming into the classroom, turn on the computer and projector. In the web browser, go to http://facorread.github.io/examClock/ and type your messages, instructions, clarifications about the exam contents, specific questions, glossary, rules, etc.
+Before students start coming into the classroom, turn on the computer and projector. In the web browser, visit one of http://facorread.github.io/examClock/ or https://facorread.gitlab.io/examClock and type your messages, instructions, clarifications about the exam contents, specific questions, glossary, rules, etc.
 
 # Questions
 
@@ -45,4 +45,4 @@ A. Zoom in and out using your browser's controls.
 
 Q. How do I change the colors, fonts, or sizes? How can I move the clock and timer around?
 
-Use Chrome Developer Tools.
+Use Chrome Developer Tools or your favorite plain text editor on the HTML/CSS code.

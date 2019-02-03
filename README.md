@@ -45,4 +45,4 @@ A. Zoom in and out using your browser's controls.
 
 Q. How do I change the colors, fonts, or sizes? How can I move the clock and timer around?
 
-Use Chrome Developer Tools or your favorite plain text editor on the HTML/CSS code.
+A. Use Chrome Developer Tools or your favorite plain text editor on the HTML/CSS code.

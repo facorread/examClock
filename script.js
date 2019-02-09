@@ -19,12 +19,30 @@ along with examClock.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 // The exam time can be set by clicking it.
-var examTimeLeft = 75, examTimeEnabled = false;
+var examTimeLeft = 75, examTimeEnabled = false, stationNoSleep;
 
 function init() {
+	stationNoSleep = new NoSleep();
     renderTime();
     renderExamTimeLeft();
     setInterval(renderTime, 1000);
+}
+
+function examFullscreen() {
+	document.getElementById("initDiv").style.display = "none";
+	stationNoSleep.enable();
+	var examDoc = document.documentElement;
+	if (examDoc.requestFullscreen) {
+		examDoc.requestFullscreen();
+	}
+	else if (examDoc.mozRequestFullScreen) { /* Firefox */
+		examDoc.mozRequestFullScreen();
+	}
+	else if (examDoc.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+		examDoc.webkitRequestFullscreen();
+	} else if (examDoc.msRequestFullscreen) { /* IE/Edge */
+		examDoc.msRequestFullscreen();
+	}
 }
 
 function renderTime() {

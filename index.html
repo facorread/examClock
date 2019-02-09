@@ -22,19 +22,19 @@ along with examClock.  If not, see <http://www.gnu.org/licenses/>.
 <html>
     <head>
         <title>Exam clock by Fabio Correa</title>
+			<script type="text/javascript" src="NoSleep.min.js"></script>
         <script type="text/javascript" src="script.js"></script>
         <link type="text/css" rel="stylesheet" href="style.css">
     </head>
     <body>
-        <table class="timeTable">
+        <table id="timeTable">
         <tr>
-        <td class="currentTimeCell" id="currentTimeCell"></td>
-        <td class="examTimeCell" id="examTimeCell" onclick="setExamTime()">
-						Contents are set by script.js
-        </td>
+        <td id="currentTimeCell"></td>
+        <td id="examTimeCell" onclick="setExamTime()">Check script.js</td>
         </tr>
         </table>
-        <div class="ExamMessagesDiv" contenteditable="true">
+				<p id="initDiv" onclick="examFullscreen()">Fullscreen</p>
+        <div id="ExamMessagesDiv" contenteditable="true">
 					<div>
 						<p>Please sit quietly on the forward chairs.</p>
 						<p>Do NOT swap materials or change seats.</p>

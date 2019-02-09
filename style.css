@@ -29,22 +29,24 @@ along with examClock.  If not, see <http://www.gnu.org/licenses/>.
 	text-align:center;
 }
 
-.timeTable {
-	font-size:65px;
+#timeTable {
 	width:100%;
-	height:auto;
 	padding:0 1px 0 1px;
 }
 
-.currentTimeCell {
+#currentTimeCell {
 	text-align:left;
 }
 
-.examTimeCell {
+#examTimeCell {
 	text-align:right;
 }
 
-.ExamMessagesDiv {
+#initDiv {
+	color:red;
+}
+
+#ExamMessagesDiv {
 	max-width:100%;
 	height:100%;
 }

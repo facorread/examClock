@@ -2,7 +2,7 @@
 
 Simple clock, countdown, and message board for taking exams
 
-Copyright (C) 2016-2018 Fabio Correa correaduran.1@osu.edu
+Copyright (C) 2016-2019 Fabio Correa correaduran.1@osu.edu
 
 https://github.com/facorread/examClock
 
